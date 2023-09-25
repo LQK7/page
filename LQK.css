@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'MuseoModerno', cursive;
+
+}
+
+body{
+  background-image: linear-gradient(123deg, #60f5f5 , #c5a2b8 ,#7796be  , #bbfdfd);
+  background-size: 600% 600% ;
+  animation: background-gradient 10s ease infinite;
+}
+@keyframes background-gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+
+                                /* ............................whatsapp button............................. */
+
+#whatsapp .watssap{
+  position: fixed;
+  transition: all .5s ease;
+  background-color: #25d366;
+  display: block;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
+  border-right: none;
+  color: #FFF;
+  font-weight: 700;
+  font-size: 30px;
+  bottom: 50px;
+  right: 20px;
+  border: 0;
+  z-index: 99999;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+}
+
+#whatsapp .watssap::before{
+  content: "";
+  position: absolute;
+  z-index: -1 ;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  -webkit-animation:pulse 1500ms ease-out infinite;
+  animation:pulse 1500ms ease-out infinite;
+}
+
+#whatsapp .watssap:focus{
+  border: none;
+  outline: none;
+}
+
+@keyframes pulse{
+  0%{ transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1); opacity: 1;}
+  100%{ transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5); opacity: 0;}
+}
+
+
+
+
+                                           /*..................... header....................... */
+
+                                          
+
+header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 5px 15px;
+    z-index: 10000;
+}
+
+header.sticky{
+  padding: 5px 100px;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+  backdrop-filter: blur( 1px );
+  -webkit-backdrop-filter: blur( 1px );
+  border-radius: 0 0 20px  20px ;
+
+}
+
+header .logo{
+  position: relative;
+  width: 110px;
+  height: 105px; 
+}
+
+
+.hed a {
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+.nav_linkes{
+    list-style: none;
+}
+.nav_linkes li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_linkes li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_linkes li a:hover {
+    color: #333;
+}
+
+  .bcta {
+    font-weight: 900;
+    font-size: 20px;
+    color: #fff;
+    padding: 6px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow:  0.95rem 0.95rem 2rem rgba(255, 255, 255, 0.42);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+  .bcta:hover {
+      background-color: #333;
+      transition: all 0.3s ease 0s;
+
+  }
+
+                                               /*......................... Programs   ................. */
+  .Programs{
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Programs .scontent img{
+    height: auto;
+    width: 400px;
+    max-width: 100%;
+  }
+
+  .stext{
+    width: 700px;
+    max-width: 100%;
+    padding: 0 10px;
+
+    }
+  
+  .scontent{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-around;
+    
+  }
+  .stext h1{
+    color: #fff;
+    font-size: 75px;
+    margin-bottom: 10px;
+    text-transform:capitalize;
+  }
+  .stext h5{
+    color: #FFF;
+    font-size: 25px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+  }
+  .stext p{
+    color: #fff;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 45PX;
+    font-family: 'Signika', sans-serif;
+    }
+
+
+                         /*.......................... sec main........................... */
+
+.main{
+
+    position: relative;
+    width: 100%;
+    height: 220vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 2.8;
+  }
+
+
+  main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .card-two, .card-three, .card-four, .card-five, .card-six, .card-family{
+    margin: 0 5rem 8rem 0;
+    padding: 0 0 0.5rem 0 ;
+    width: 20rem;
+    background: white;
+    color: #444;
+    text-align: center;
+    border-radius: 2rem;
+    box-shadow:  0.95rem 0.5rem 5rem rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    transition: all 0.1ms ease-in-out;
+  }
+  
+  .card-two:hover, .card-three:hover, .card-four:hover, .card-five:hover, .card-six:hover, .card-family:hover{
+    transform: scale(1.02);
+  }
+  
+  .card-header{
+    height: 7rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.90rem;
+    padding: 1rem 0;
+    color: white;
+    clip-path: polygon(0 0 , 100% 0%, 100% 85%, 0% 100%);
+  }
+  
+  .header-two, .btn-two{
+    background: linear-gradient(135deg, cyan, #06c766);
+  }
+  
+  .header-three, .btn-three{
+    background: linear-gradient(135deg, #b202c9, #cf087c);
+  }
+  
+  .header-four, .btn-four{
+    background: linear-gradient(135deg, #eea300, #ee5700);
+  }
+  
+  .header-five, .btn-five{
+    background: linear-gradient(135deg, rgb(53, 64, 64), rgb(53, 74, 74));
+  }
+  
+  .header-six, .btn-six{
+    background: linear-gradient(135deg, #32cdcd, #2c9ac8);
+  }
+  
+  .header-family, .btn-family{
+    background: linear-gradient(135deg, #5ce850, #80ce59);
+  }
+  
+  .card-body{
+    padding: 1rem 0;
+    
+  
+  }
+  
+  .card-body h2{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .card-element-container{
+    color: #444;
+    list-style: none;
+  
+  }
+  
+  .btn-two , .btn-three , .btn-four , .btn-five , .btn-six , .btn-family {
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.1ms ease-in-out;
+  }
+  
+.btn-two:hover , .btn-three:hover , .btn-four:hover , .btn-five:hover , .btn-six:hover , .btn-family:hover {
+    transform: scale(0.95);
+  }
+  
+  .btn-two:active , .btn-three:active , .btn-four:active , .btn-five:active , .btn-six:active , .btn-family:active {
+    transform: scale(1);
+  }
+  
+  .card-element-hidden{
+    display: nones;
+  }
+
+                              /*...................... sec main II ........................*/
+
+.mainII{
+    position: absolute;
+    display: flex;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+}
+
+
+.mainII .sec
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+
+}
+
+.mainII .sec.sec1
+{
+    /* background: #b0ff54; */
+  background-image: linear-gradient(123deg, #60f5f5 , #c5a2b8 ,#7796be  , #bbfdfd);
+   clip-path: circle(100px at 0 0);
+  animation: about-bk 10s ease infinite;
+
+}
+
+
+.mainII .sec.sec2
+{
+    /* background: #03a9f4; */
+  background-image: linear-gradient(123deg, #60f5f5 , #c5a2b8 ,#7796be  , #bbfdfd);
+  clip-path: circle(100px at 100% 100%);
+}
+
+.mainII h2
+{
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     width: 100%;
+     text-align: center;
+     color: #fff;
+     font-size: 8em;
+    }
+
+.mainII .sec.sec1 h2{
+    color: transparent;
+    -webkit-text-stroke: 5px #333;
+
+}
+.mainII .sec.sec2 h2{
+    color: #333;
+    -webkit-text-stroke: 5px #FFF;
+
+}
+
